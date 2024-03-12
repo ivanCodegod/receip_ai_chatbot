@@ -4,78 +4,78 @@ import numpy as np
 import random
 import json
 from tensorflow import keras
-import pickle
 
 stemmer = LancasterStemmer()
 
-with open("intents.json") as file:
+with open("intents.json") as file:  # TODO: Use database for storing intents instead
     data = json.load(file)
 
-try:
-    with open("data.pickle", "rb") as f:
-        words, labels, training, output = pickle.load(f)
-except:
-    words = []  # all words tokenized
-    labels = []  # unique tags
-    docs_x = []
-    docs_y = []  # tags for each word
+words = []  # all words (patterns) tokenized
+labels = []  # unique tags
+docs_x = []  # list that contains lists with tokenized patterns for each pattern listed
+docs_y = []  # tags for each word
 
-    for intent in data["intents"]:
-        for pattern in intent["patterns"]:
-            wrds = nltk.word_tokenize(pattern)
-            words.extend(wrds)
-            docs_x.append(wrds)
-            docs_y.append(intent["tag"])
+training = []
+output = []
 
-        if intent["tag"] not in labels:
-            labels.append(intent["tag"])
+for intent in data["intents"]:
+    for pattern in intent["patterns"]:
+        wrds: list = nltk.word_tokenize(
+            pattern)  # tokenized patterns in format like ['Shrimp', 'Scampi'] for "Shrimp Scampi" pattern
+        words.extend(wrds)  # appending tokenized patterns to general list with all words tokenized
+        docs_x.append(wrds)
+        docs_y.append(intent["tag"])
 
-    words = [stemmer.stem(w.lower()) for w in words if w != "?"]
+    if intent["tag"] not in labels:
+        labels.append(intent["tag"])
 
-    training = []
-    output = []
-    out_empty = [0 for _ in range(len(labels))]
+# stemmer.stem(…) applies the "stemming" process to the converted lowercase word. Stemming is a sort of normalization
+# for words. It removes suffixes (like "ing" or "ed") from words based on a set of heuristic rules. This allows the
+# model to treat different forms of the same word as the identical word, which can be useful in many language
+# processing tasks.
+words = [stemmer.stem(w) for w in words if
+         w != "?"]  # and applies the stemming process (reducing the word to its root form
+words = sorted(list(set(words)))
 
-    for x, doc in enumerate(docs_x):
-        bag = []
+out_empty = [0 for _ in range(len(labels))]
+for x, doc in enumerate(docs_x):  # TODO: rename x and doc to better naming
+    bag = []
 
-        wrds = [stemmer.stem(w.lower()) for w in doc]
+    wrds = [stemmer.stem(w) for w in doc]
 
-        for w in words:
-            if w in wrds:
-                bag.append(1)
-            else:
-                bag.append(0)
+    for w in words:
+        if w in wrds:
+            bag.append(1)
+        else:
+            bag.append(0)
 
-        output_row = out_empty[:]
-        output_row[labels.index(docs_y[x])] = 1
+    output_row = out_empty[:]
+    output_row[labels.index(docs_y[x])] = 1  # creating the output for your training data using one-hot encoding
 
-        training.append(bag)
-        output.append(output_row)
+    training.append(bag)
+    output.append(output_row)
 
-    training = np.array(training)
-    output = np.array(output)
+training = np.array(training)
+output = np.array(output)
 
-    with open("data.pickle", "wb") as f:
-        pickle.dump((words, labels, training, output), f)
-
-model = keras.Sequential([
+model = keras.Sequential([  # TODO: Educational: How it works?
     keras.layers.Dense(8, activation='relu', input_shape=(len(training[0]),)),
     keras.layers.Dense(8, activation='relu'),
     keras.layers.Dense(len(output[0]), activation='softmax')
 ])
 
-model.compile(optimizer='adam', loss='categorical_crossentropy', metrics=['accuracy'])
+model.compile(optimizer='adam', loss='categorical_crossentropy',
+              metrics=['accuracy'])  # TODO: Educational: How it works?
 
 try:
-    model = keras.models.load_model("my_model.keras")
+    model = keras.models.load_model("ai_chat_bot_model.keras")
     print(f"model: {model}")
-except:
+except:  # TODO: Use specific exceptions instead
     model.fit(training, output, epochs=1000, batch_size=8)
-    model.save("my_model.keras")
+    model.save("ai_chat_bot_model.keras")
 
 
-def bag_of_words(s, words):
+def bag_of_words(s, words):  # TODO: Educational: How it works?
     bag = [0 for _ in range(len(words))]
 
     s_words = nltk.word_tokenize(s)
@@ -90,25 +90,25 @@ def bag_of_words(s, words):
 
 
 def chat():
-    print("Start talking with the bot (type quit to stop)!")
-    while True:
+    print("Start talking with the bot (type quit to stop)!")  # TODO: Make it more beautiful
+    while True:  # TODO: We can create logic for vegans and for non vegans
         inp = input("You: ")
         if inp.lower() == "quit":
+            # TODO: Make it more beautiful
             break
-        # results = model.predict([bag_of_words(inp, words)])
-        results = model.predict(bag_of_words(inp, words)[np.newaxis, :])[0]
+        results = model.predict(bag_of_words(inp, words)[np.newaxis, :])[0]  # TODO: Educational: How it works?
         print(f"results: {results}")
         results_index = np.argmax(results)
         tag = labels[results_index]
         print(f"tag: {tag}")
 
-        if results[results_index] >= 0.5:
-            for tg in data["intents"]:
-                if tg['tag'] == tag:
-                    responses = tg['responses']
-                    print(random.choice(responses))
-        else:
-            print("I didn't get that, try again.")
+        # if results[results_index] >= 0.5:  # TODO: Should be a constant
+        #     for tg in data["intents"]:
+        #         if tg['tag'] == tag:
+        #             responses = tg['responses']
+        #             print(random.choice(responses))
+        # else:
+        #     print("I didn't get that, try again.")  # TODO: Make it more beautiful
 
 
 chat()

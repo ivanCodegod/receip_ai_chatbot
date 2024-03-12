@@ -1,57 +1,40 @@
 {
   "intents": [
     {
-      "tag": "Baked Shrimp Scampi instructions",
+      "tag": "Baked Shrimp Scampi",
       "patterns": [
         "Baked Shrimp Scampi",
         "Shrimp Scampi",
         "Scampi",
         "How to make Baked Shrimp Scampi?",
+        "Baked Shrimp Scampi",
+        "Scampi Shrimp",
         "Give me the recipe for Baked Shrimp Scampi",
         "Baked Shrimp Scampi recipe",
         "Shrimp Scampi recipe",
         "Shrimp Scampi instructions",
         "Can I get the instructions for Baked Shrimp Scampi?",
-        "Can you share the Baked Shrimp Scampi recipe from Ina Garten: Barefoot Contessa Back to Basics?",
-        "I want to cook Baked Shrimp Scampi, can you guide me?",
-        "Who is the author of the Baked Shrimp Scampi recipe?"
+        "Can you share the Baked Shrimp Scampi recipe?",
+        "I want to cook Baked Shrimp Scampi, can you guide me?"
       ],
-      "responses": [
+      "instructions": [
         "Preheat the oven to 425 degrees F.\r\n\r\nDefrost shrimp by putting in cold water, then drain and toss with wine, oil, salt, and pepper. Place in oven-safe dish and allow to sit at room temperature while you make the butter and garlic mixture.\r\n\r\nIn a small bowl, mash the softened butter with the rest of the ingredients and some salt and pepper.\r\n\r\nSpread the butter mixture evenly over the shrimp. Bake for 10 to 12 minutes until hot and bubbly. If you like the top browned, place under a broiler for 1-3 minutes (keep an eye on it). Serve with lemon wedges and French bread.\r\n\r\nNote: if using fresh shrimp, arrange for presentation. Starting from the outer edge of a 14-inch oval gratin dish, arrange the shrimp in a single layer cut side down with the tails curling up and towards the center of the dish. Pour the remaining marinade over the shrimp. "
       ],
-      "source": "Ina Garten: Barefoot Contessa Back to Basics",
-      "calories": 2565,
-      "fat": 159,
-      "sat-fat": 67,
-      "carbs": 76,
-      "fiber": 4,
-      "sugar": 6,
-      "protein": 200
-    },
-    {
-      "tag": "Baked Shrimp Scampi ingredients",
-      "patterns": [
-        "What are the ingredients for Baked Shrimp Scampi?",
-        " What is the origin of the Baked Shrimp Scampi recipe?",
-        "Tell me the carb content in Baked Shrimp Scampi"
-      ],
-      "responses": [
-        [
-          "2/3 cup panko",
-          "1/4 teaspoon red pepper flakes",
-          "1/2 lemon, zested and juiced",
-          "1 extra-large egg yolk\r",
-          "1 teaspoon rosemary, minced",
-          "3 tablespoon parsley, minced",
-          "4 clove garlic, minced",
-          "1/4 cup shallots, minced",
-          "8 tablespoon unsalted butter, softened at room temperature",
-          "2 tablespoon dry white wine",
-          "Freshly ground black pepper",
-          "Kosher salt",
-          "3 tablespoon olive oil",
-          "2 pound frozen shrimp"
-        ]
+      "ingredients": [
+        "2/3 cup panko\r",
+        "1/4 teaspoon red pepper flakes\r",
+        "1/2 lemon, zested and juiced\r",
+        "1 extra-large egg yolk\r",
+        "1 teaspoon rosemary, minced\r",
+        "3 tablespoon parsley, minced\r",
+        "4 clove garlic, minced\r",
+        "1/4 cup shallots, minced\r",
+        "8 tablespoon unsalted butter, softened at room temperature\r",
+        "2 tablespoon dry white wine\r",
+        "Freshly ground black pepper\r",
+        "Kosher salt\r",
+        "3 tablespoon olive oil\r",
+        "2 pound frozen shrimp"
       ],
       "source": "Ina Garten: Barefoot Contessa Back to Basics",
       "calories": 2565,
@@ -63,21 +46,121 @@
       "protein": 200
     },
     {
-      "tag": "Onion Pie instructions",
+      "tag": "Smoked Salmon Ebelskivers",
       "patterns": [
-        ""
+        "Smoked Salmon Ebelskivers",
+        "Salmon Ebelskivers",
+        "How to make Smoked Salmon Ebelskivers?",
+        "Smoked Salmon Ebelskivers recipe",
+        "Salmon Ebelskivers recipe",
+        "Ebelskivers recipe",
+        "Salmon Ebelskivers instructions",
+        "Can I get the instructions for Smoked Salmon Ebelskivers?",
+        "Can you share the Smoked Salmon Ebelskivers recipe?",
+        "I want to cook Smoked Salmon Ebelskivers, can you guide me?"
       ],
-      "responses": [
-        "Preheat the oven to 400 degrees halfway through onion cooking.\r\n\r\nSlice the onions and saute in 4 tablespoons butter over medium-low heat; the longer you cook them - as long as 35 minutes - the sweeter they will be.  Sprinkle in crushed red pepper.\r\n\r\nMelt the remaining 4 tablespoons butter.  Mix with the crushed crackers, then press the mixture into the bottom and sides of a glass pie plate to form a crust.  Prebake crust for 10 minutes.\r\n\r\nLightly beat the eggs and milk together in a small bowl.\r\n\r\nSpoon the onions into the crust, then pour the egg mixture over them.  Sprinkle with Parmesan.\r\n\r\nBake for 30-40 minutes until set and golden."
+      "instructions": [
+        "Preheat oven to 200F.\r\n\r\nIn a large bowl, whisk together the flour, sugar, baking powder, salt, and pepper. In a small bowl, lightly whisk the egg yolks, then whisk in the milk, 2 tablespoons of melted butter and lemon juice. Add the yolk mixture to the flour mixture and, using a wooden spoon, stir until well blended. The batter will be lumpy.\r\n\r\nIn a clean bowl, using an electric mixer on high speed, beat the egg whites until stiff, but not dry, peaks form. Using a silicone spatula, fold about one-third of the egg whites into the batter to lighten it, then fold in the rest just until no white streaks remain. Stir in fresh dill.\r\n\r\nBrush the wells of the ebelskiver pan with some of the remaining melted butter and place over medium heat. When the butter starts to bubble, add about 1 tablespoon batter to each well. Working quickly, carefully spoon about 1\/2 teaspoon of the smoked salmon into the center of each pancake, then spoon about 1\/2 teaspoon of the cream cheese on top. Top each with another 1 tablespoon batter. (Alternatively, gently mix the cream cheese and salmon together. Spoon about 1 teaspoon into the center of each pancake)\r\n\r\nCook until the bottoms of the pancakes are lightly browned and crisp, 3-5 minutes. Use 2 short wooden skewers to turn all the  pancakes and cook until lightly browned on the second side, about 3 minutes longer.\r\n\r\nTransfer the finished pancakes to a platter and keep warm  in the oven while you repeat to make 2 more batches. Serve right away."
       ],
-      "source": "Houston Chronicle 1/18/2006",
-      "calories": 0,
-      "fat": 0,
-      "sat-fat": 0,
-      "carbs": 0,
-      "fiber": 0,
-      "sugar": 0,
-      "protein": 0
+      "ingredients": [
+        "1 cup all-purpose flour\r",
+        "1 1/2 tsp sugar\r",
+        "1/2 tsp baking powder\r",
+        "1/4 tsp salt\r",
+        "1/2 tsp pepper, freshly ground\r",
+        "2 large eggs, separated\r",
+        "1 cup milk\r",
+        "3 tbsp unsalted butter, melted and slightly cooled, divided use\r",
+        "1 tsp fresh lemon juice\r",
+        "1/4 cup fresh dill, chopped and firmly packed\r",
+        "3 1/2 tbsp smoked salmon, minced (about 4 oz)\r",
+        "3 1/2 tbsp whipped-style cream cheese, at room temperature\r"
+      ],
+      "source": "Ebelskivers by Kevin Crafts",
+      "calories": 256,
+      "fat": 15,
+      "sat-fat": 67,
+      "carbs": 96,
+      "fiber": 2,
+      "sugar": 13,
+      "protein": 500
+    },
+    {
+      "tag": "Godiva Angel Pie",
+      "patterns": [
+        "Godiva Angel Pie",
+        "Angel Pie",
+        "How to make Godiva Angel Pie?",
+        "Godiva Angel Pie recipe",
+        "Angel Pie recipe",
+        "Angel Pie instructions",
+        "Can I get the instructions for Godiva Angel Pie?",
+        "Can you share the Godiva Angel Pie recipe?",
+        "I want to cook Godiva Angel Pie, can you guide me?",
+        "Recipe for a pie made with Godiva chocolate",
+        "I need a Godiva chocolate pie recipe"
+      ],
+      "instructions": [
+        "TO MAKE SHELL: Preheat oven to 300 degrees. In mixer bowl, beat egg whites until foamy. Beat in salt and cream of tartar and beat until soft peaks form. Add sugar, a tablespoon at a time, beating after each addition. Continue until very stiff peaks form. Fold in nuts and vanilla. Lightly butter a metal 8-inch pie plate. (Do NOT use glass.) Spoon meringue into pan lightly, building up the edges to come at least 1\/2 inch above the side of the pan. Bake in preheated 300 degree oven for 35 to 40 minutes until light brown. Cool completely before adding filling. TO MAKE FILLING: Melt chocolate and water in a pan over hot, but not boiling, water, stirring occasionally, to blend. Add vanilla and chocolate mixture (cooled) to whipped cream and pile into meringue shell, swirling top with spatula. Be sure to cool the chocolate mixture before adding to the whipped cream. If it is too warm, the mixture will thin out. If this happens, chill until it is thick enough to put in shell."
+      ],
+      "ingredients": [
+        "4 (1 oz.) squares Godiva cooking chocolate or 4 oz. Baker's German sweet chocolate\r",
+        "1/2 tsp vanilla\r",
+        "1 cup pecans, finely chopped\r",
+        "1/2 cup sugar\r",
+        "1/8 tsp cream of tartar\r",
+        "1/8 tsp salt\r",
+        "2 egg whites, at room temperature\r",
+        "3 tbsp water\r",
+        "1 tsp vanilla\r",
+        "1 cup heavy cream, whipped"
+      ],
+      "source": "everyrecipe.com",
+      "calories": 123,
+      "fat": 56,
+      "sat-fat": 70,
+      "carbs": 96,
+      "fiber": 3,
+      "sugar": 1,
+      "protein": 120
+    },
+    {
+      "tag": "Spaetzle",
+      "patterns": [
+        "Spaetzle",
+        "How to make Spaetzle?",
+        "Spaetzle recipe",
+        "Spaetzle instructions",
+        "Can I get the instructions for Spaetzle?",
+        "Can you share the Spaetzle recipe?",
+        "I want to cook Spaetzle, can you guide me?",
+        "Recipe for a Spaetzle",
+        "I need a Spaetzle recipe"
+      ],
+      "instructions": [
+        "Bring a saucepan of salted water it a boil, reduce the heat, and maintain a simmer. In a bowl, stir all the ingredients together (eggs, flour, milk, salt, baking powder, and nutmeg). Place a colander over the pan, pour about1\/4 of the batter into the colander, and press through the holes with a plastic spatula into the hot water. When the spatzle starts to float to the surface, cover the pan and keep covered until the spatzle appears to swell and is fluffy. Remove the dumplings and repeat the procedure with the remaining batter.\r\n\r\nIn a medium saute pan, add butter, and melt over medium heat until butter turns a light brown. Add garlic and cook until it becomes lightly colored. Add spaetzle to the pan to heat through. Add parsley, cheese, salt and pepper, to taste."
+      ],
+      "ingredients": [
+        "2 teaspoon fresh parsley, chopped\r",
+        "1 teaspoon garlic, minced\r",
+        "3 tablespoon butter\r",
+        "1 pinch nutmeg\r",
+        "1/4 teaspoon baking powder\r",
+        "1 teaspoon salt\r",
+        "1/2 cup milk\r",
+        "1 1/2 cup flour, sifted\r",
+        "2 eggs, slightly beaten\r",
+        "2 tablespoon finely grated Parmesan, plus extra for garnish\r",
+        "Salt and freshly ground black pepper"
+      ],
+      "source": "foodnetwork.com",
+      "calories": 904,
+      "fat": 90,
+      "sat-fat": 12,
+      "carbs": 90,
+      "fiber": 7,
+      "sugar": 45,
+      "protein": 760
     }
   ]
 }
