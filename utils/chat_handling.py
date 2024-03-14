@@ -36,7 +36,7 @@ def chat(model, words, labels):
         print(f"tag: {tag}")
 
         if results[results_index] > 0.5:
-            with open("intents-old.json") as file:
+            with open("intents_2024-03-14T22-57-23.json") as file:
                 data = json.load(file)
             for tg in data["intents"]:
                 if tg['tag'] == tag:

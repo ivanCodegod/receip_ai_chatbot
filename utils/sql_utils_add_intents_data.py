@@ -1,5 +1,6 @@
-import json
 import mysql.connector
+
+from helpers.intents_helper import load_intents_file
 
 mydb = mysql.connector.connect(
     host="localhost",
@@ -11,8 +12,7 @@ mydb = mysql.connector.connect(
 mycursor = mydb.cursor()
 
 # Open the intents.json file and load it into a dictionary
-with open('intents.json') as f:
-    intents = json.load(f)
+intents = load_intents_file()
 
 # Insert data into the "Recipes" table for each intent
 for intent in intents['intents']:

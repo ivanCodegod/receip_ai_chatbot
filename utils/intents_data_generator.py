@@ -66,7 +66,8 @@ def generate_intents_file():
     current_datetime = datetime.now().strftime("%Y-%m-%dT%H-%M-%S")
 
     intents_filename = f"intents_{current_datetime}.json"
-    with open(f'{parent_dir}/{intents_filename}', 'w') as outfile:
+    path = os.path.join(parent_dir, intents_filename)
+    with open(path, 'w') as outfile:
         json.dump(intents, outfile)
 
 
