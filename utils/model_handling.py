@@ -12,7 +12,7 @@ def initialize_model(input_shape, output_shape):
     return model
 
 
-def train_model(model, training, output, epochs=10000, batch_size=8):
+def train_model(model, training, output, epochs=1000, batch_size=8):
     """Train the model with the provided training and output data."""
     # TODO: Add some logging
     # model.compile(optimizer='adam', loss='categorical_crossentropy', metrics=['accuracy'])  # TODO: refactor
