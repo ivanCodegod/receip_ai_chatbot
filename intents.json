@@ -43,7 +43,8 @@
       "carbs": 76,
       "fiber": 4,
       "sugar": 6,
-      "protein": 200
+      "protein": 200,
+      "is-vegan": 0
     },
     {
       "tag": "Smoked Salmon Ebelskivers",
@@ -83,7 +84,8 @@
       "carbs": 96,
       "fiber": 2,
       "sugar": 13,
-      "protein": 500
+      "protein": 500,
+      "is-vegan": 0
     },
     {
       "tag": "Godiva Angel Pie",
@@ -122,7 +124,8 @@
       "carbs": 96,
       "fiber": 3,
       "sugar": 1,
-      "protein": 120
+      "protein": 120,
+      "is-vegan": 0
     },
     {
       "tag": "Spaetzle",
@@ -149,7 +152,6 @@
         "1 teaspoon salt\r",
         "1/2 cup milk\r",
         "1 1/2 cup flour, sifted\r",
-        "2 eggs, slightly beaten\r",
         "2 tablespoon finely grated Parmesan, plus extra for garnish\r",
         "Salt and freshly ground black pepper"
       ],
@@ -160,7 +162,8 @@
       "carbs": 90,
       "fiber": 7,
       "sugar": 45,
-      "protein": 760
+      "protein": 760,
+      "is-vegan": 1
     }
   ]
 }
