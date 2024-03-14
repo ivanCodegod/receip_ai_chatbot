@@ -5,6 +5,8 @@ import random
 import json
 from tensorflow import keras
 
+from utils.sql_utils_parce_data import get_pattern_texts, get_recipe_names
+
 stemmer = LancasterStemmer()
 
 with open("intents.json") as file:  # TODO: Use database for storing intents instead
@@ -18,16 +20,18 @@ docs_y = []  # tags for each word
 training = []
 output = []
 
-for intent in data["intents"]:
-    for pattern in intent["patterns"]:
+recipe_names = get_recipe_names()
+pattern_texts = get_pattern_texts()
+for tag in recipe_names:
+    for pattern in pattern_texts:
         wrds: list = nltk.word_tokenize(
             pattern)  # tokenized patterns in format like ['Shrimp', 'Scampi'] for "Shrimp Scampi" pattern
         words.extend(wrds)  # appending tokenized patterns to general list with all words tokenized
         docs_x.append(wrds)
-        docs_y.append(intent["tag"])
+        docs_y.append(tag)  # appending with tag aka. recipie name
 
-    if intent["tag"] not in labels:
-        labels.append(intent["tag"])
+    if tag not in labels:
+        labels.append(tag)
 
 # stemmer.stem(…) applies the "stemming" process to the converted lowercase word. Stemming is a sort of normalization
 # for words. It removes suffixes (like "ing" or "ed") from words based on a set of heuristic rules. This allows the
