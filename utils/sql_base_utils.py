@@ -20,32 +20,34 @@ def get_recipes_data():
     result = cursor.fetchall()
 
     cursor.close()
-    create_sql_connection().close()
+    connection.close()
 
     return result
 
 
 def get_pattern_text_data():
-    cursor = create_sql_connection().cursor()
+    connection = create_sql_connection()
+    cursor = connection.cursor()
 
     # Query for fetching RecipeName from Recipes table
     cursor.execute('SELECT RecipeID, PatternText FROM Patterns ORDER BY RecipeID;')
     result = cursor.fetchall()
 
     cursor.close()
-    create_sql_connection().close()
+    connection.close()
 
     return result
 
 
 def get_ingredient_data():
-    cursor = create_sql_connection().cursor()
+    connection = create_sql_connection()
+    cursor = connection.cursor()
 
     # Query for fetching RecipeName from Recipes table
     cursor.execute('SELECT RecipeID, Ingredient FROM Ingredients ORDER BY RecipeID;')
     result = cursor.fetchall()
 
     cursor.close()
-    create_sql_connection().close()
+    connection.close()
 
     return result
