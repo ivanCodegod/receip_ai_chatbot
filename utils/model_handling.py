@@ -32,3 +32,15 @@ def load_model(filename="ai_chat_bot_model.keras"):
     model = keras.models.load_model(filename)
     # TODO: Add some logging
     return model
+
+
+def set_model(training_data, output_data):
+    model = initialize_model(input_shape=len(training_data[0]), output_shape=len(output_data[0]))
+    model.compile(optimizer='adam', loss='categorical_crossentropy', metrics=['accuracy'])
+
+    try:
+        model = load_model()
+    except:
+        train_model(model, training_data, output_data)
+
+    return model
