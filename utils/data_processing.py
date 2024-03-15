@@ -14,6 +14,9 @@ def get_words(data):  # TODO: need better naming for func
         for pattern in intent["patterns"]:
             wrds = nltk.word_tokenize(pattern)
             words.extend(wrds)
+
+    words = [stemmer.stem(w) for w in words if w != "?"]
+    words = sorted(list(set(words)))
     return words
 
 
@@ -21,9 +24,6 @@ def get_labels(data):  # TODO: need better naming for func
     labels = []  # unique tags
 
     for intent in data["intents"]:
-        for pattern in intent["patterns"]:
-            wrds = nltk.word_tokenize(pattern)
-
         if intent["tag"] not in labels:
             labels.append(intent["tag"])
 
