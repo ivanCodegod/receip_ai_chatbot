@@ -89,7 +89,7 @@ def start_chat(model, words, labels):
         if inp.lower() == "quit":
             break
 
-        results = model.predict(bag_of_words(inp, words)[np.newaxis, :])[0]  # TODO: Educational: How it works?
+        results = model.predict(bag_of_words(inp, words)[np.newaxis, :])[0]
         results_index = np.argmax(results)
         tag = labels[results_index]
 

@@ -5,9 +5,7 @@ import numpy as np
 stemmer = LancasterStemmer()
 
 
-# TODO: Add some logging
-
-def get_words(data):  # TODO: need better naming for func
+def get_words(data):
     words = []
 
     for intent in data["intents"]:
@@ -20,7 +18,7 @@ def get_words(data):  # TODO: need better naming for func
     return words
 
 
-def get_labels(data):  # TODO: need better naming for func
+def get_labels(data):
     labels = []  # unique tags
 
     for intent in data["intents"]:
@@ -30,7 +28,7 @@ def get_labels(data):  # TODO: need better naming for func
     return labels
 
 
-def get_docs(data):  # TODO: need better naming for func
+def get_docs(data):
     docs_x = []
     docs_y = []
 
